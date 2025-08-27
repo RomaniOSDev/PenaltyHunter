@@ -1,0 +1,6 @@
+framework module Pods_PenaltyHunter {
+  umbrella header "Pods-PenaltyHunter-umbrella.h"
+
+  export *
+  module * { export * }
+}
