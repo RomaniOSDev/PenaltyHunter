@@ -35,7 +35,7 @@ struct MainView: View {
                     Button {
                         navManager.navigate(to: .news)
                     } label: {
-                        Image(systemName: "newspaper")
+                        Image(.newsButton)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
@@ -77,15 +77,22 @@ struct MainView: View {
                 switch screen {
                 case .guide: GuideView()
                 case .settings: SettingsView()
+                    .environmentObject(QuizResultsManager.shared)
                 case .news: NewsView()
+                    .environmentObject(NewsAPIService.shared)
                 case .quiz: QuizView()
                 case .ref: RefView()
                 case .guideInfo(let guide): GuideInfoView(guide: guide)
-                case .quizQuestion: QuizQuestionsView()
+                case .quizQuestion(let difficulty): QuizQuestionsView(difficulty: difficulty)
+                case .quizResults: QuizResultsView()
+                    .environmentObject(QuizResultsManager.shared)
                 }
             }
         }
         .environmentObject(navManager)
+        .environmentObject(QuizDataManager.shared)
+        .environmentObject(QuizResultsManager.shared)
+        .environmentObject(NewsAPIService.shared)
     }
 }
 

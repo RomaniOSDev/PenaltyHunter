@@ -10,6 +10,7 @@ import SwiftUI
 struct QuizView: View {
     
     @EnvironmentObject var navManager: NavigationManager
+    @State private var selectedDifficulty: DifficultyLevel?
     
     var body: some View {
         ZStack {
@@ -39,18 +40,27 @@ struct QuizView: View {
 
                 }
                 Spacer()
-                VStack {
-                    Button(action: {navManager.navigate(to: .quizQuestion)}) {
+                VStack(spacing: 15) {
+                    Button(action: {
+                        selectedDifficulty = .easy
+                        navManager.navigate(to: .quizQuestion(.easy))
+                    }) {
                         Image(.easyLabel)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
-                    Button(action: {navManager.navigate(to: .quizQuestion)}) {
+                    Button(action: {
+                        selectedDifficulty = .medium
+                        navManager.navigate(to: .quizQuestion(.medium))
+                    }) {
                         Image(.mediumLabel)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
-                    Button(action: {navManager.navigate(to: .quizQuestion)}) {
+                    Button(action: {
+                        selectedDifficulty = .hard
+                        navManager.navigate(to: .quizQuestion(.hard))
+                    }) {
                         Image(.hardLabel)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -58,9 +68,16 @@ struct QuizView: View {
                 }.padding()
             }.padding()
         }
+        .navigationBarBackButtonHidden()
+        .onAppear {
+            // Сбрасываем выбранный уровень при появлении экрана
+            selectedDifficulty = nil
+        }
     }
 }
 
 #Preview {
     QuizView()
+        .environmentObject(NavigationManager())
+        .environmentObject(QuizDataManager.shared)
 }
