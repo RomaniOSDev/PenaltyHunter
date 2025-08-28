@@ -48,4 +48,35 @@ enum Guide: CaseIterable {
             return .saddtime
         }
     }
+    
+    var largeIcon: ImageResource {
+        switch self {
+            
+        
+        case .kik:
+            return .bkick
+        case .ball:
+            return .bball
+        case .scroll:
+            return .bscroll
+        case .fouls:
+            return .bfouls
+        case .misconducts:
+            return.bmisconduct
+        case .freeKicks:
+            return .bfree
+        case .throwIns:
+            return .bthrow
+        case .goalkicks:
+            return .bgoalkick
+        case .yellowCards:
+            return .byellow
+        case .advantage:
+            return .badvantage
+        case .substitutions:
+            return .bsubstitutiion
+        case .addtime:
+            return .baddtime
+        }
+    }
 }

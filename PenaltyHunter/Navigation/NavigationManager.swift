@@ -12,6 +12,7 @@ enum Screen: Hashable {
     case settings
     case news
     case quiz
+    case quizQuestion
     case ref
     case guide
     case guideInfo(Guide)

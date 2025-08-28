@@ -12,7 +12,33 @@ struct GuideInfoView: View {
     let guide: Guide
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image(.mainBack)
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                //MARK:  - Backbutton
+                HStack {
+                    Button {
+                        navManager.popBack()
+                    } label: {
+                        Image(.backButton)
+                            .resizable()
+                            .frame(width: 70, height: 60)
+                    }
+                    Spacer()
+
+                }
+                Spacer()
+                Image(guide.largeIcon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    
+                Spacer()
+            }
+            .padding()
+            .navigationBarBackButtonHidden()
+        }
     }
 }
 

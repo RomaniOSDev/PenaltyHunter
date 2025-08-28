@@ -81,6 +81,7 @@ struct MainView: View {
                 case .quiz: QuizView()
                 case .ref: RefView()
                 case .guideInfo(let guide): GuideInfoView(guide: guide)
+                case .quizQuestion: QuizQuestionsView()
                 }
             }
         }
