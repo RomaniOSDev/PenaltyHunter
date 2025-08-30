@@ -82,10 +82,12 @@ struct MainView: View {
                     .environmentObject(NewsAPIService.shared)
                 case .quiz: QuizView()
                 case .ref: RefView()
+                    .environmentObject(RefereeDataManager.shared)
                 case .guideInfo(let guide): GuideInfoView(guide: guide)
                 case .quizQuestion(let difficulty): QuizQuestionsView(difficulty: difficulty)
                 case .quizResults: QuizResultsView()
                     .environmentObject(QuizResultsManager.shared)
+                case .info: InfoView()
                 }
             }
         }
@@ -93,6 +95,7 @@ struct MainView: View {
         .environmentObject(QuizDataManager.shared)
         .environmentObject(QuizResultsManager.shared)
         .environmentObject(NewsAPIService.shared)
+        .environmentObject(RefereeDataManager.shared)
     }
 }
 

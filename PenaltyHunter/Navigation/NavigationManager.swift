@@ -17,6 +17,7 @@ enum Screen: Hashable {
     case ref
     case guide
     case guideInfo(Guide)
+    case info
 }
 
 @MainActor

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,22 @@
 		740AFA372E5F645C001658EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740AFA2C2E5F645C001658EA /* LaunchScreen.storyboard */; };
 		740AFA382E5F645C001658EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740AFA2E2E5F645C001658EA /* Main.storyboard */; };
 		740AFA472E5F886A001658EA /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740AFA462E5F8864001658EA /* NavigationManager.swift */; };
+		741882F32E636DC900323D93 /* enumGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882DD2E636DC900323D93 /* enumGuide.swift */; };
+		741882F42E636DC900323D93 /* GuideInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882DE2E636DC900323D93 /* GuideInfoView.swift */; };
+		741882F52E636DC900323D93 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882DF2E636DC900323D93 /* GuideView.swift */; };
+		741882F62E636DC900323D93 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E12E636DC900323D93 /* MainView.swift */; };
+		741882F72E636DC900323D93 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E32E636DC900323D93 /* NewsModel.swift */; };
+		741882F82E636DC900323D93 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E42E636DC900323D93 /* NewsView.swift */; };
+		741882F92E636DC900323D93 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E62E636DC900323D93 /* QuizModel.swift */; };
+		741882FA2E636DC900323D93 /* QuizQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E72E636DC900323D93 /* QuizQuestionsView.swift */; };
+		741882FB2E636DC900323D93 /* QuizResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E82E636DC900323D93 /* QuizResultsManager.swift */; };
+		741882FC2E636DC900323D93 /* QuizResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882E92E636DC900323D93 /* QuizResultsView.swift */; };
+		741882FD2E636DC900323D93 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882EA2E636DC900323D93 /* QuizView.swift */; };
+		741882FE2E636DC900323D93 /* RefModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882EC2E636DC900323D93 /* RefModel.swift */; };
+		741882FF2E636DC900323D93 /* RefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882ED2E636DC900323D93 /* RefView.swift */; };
+		741883002E636DC900323D93 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882EF2E636DC900323D93 /* SettingsView.swift */; };
+		741883012E636DC900323D93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741882F12E636DC900323D93 /* ContentView.swift */; };
+		741883032E636E8300323D93 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741883022E636E8300323D93 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +45,23 @@
 		740AFA2F2E5F645C001658EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		740AFA302E5F645C001658EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		740AFA462E5F8864001658EA /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		741882DD2E636DC900323D93 /* enumGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enumGuide.swift; sourceTree = "<group>"; };
+		741882DE2E636DC900323D93 /* GuideInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideInfoView.swift; sourceTree = "<group>"; };
+		741882DF2E636DC900323D93 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		741882E12E636DC900323D93 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		741882E32E636DC900323D93 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		741882E42E636DC900323D93 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		741882E62E636DC900323D93 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		741882E72E636DC900323D93 /* QuizQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionsView.swift; sourceTree = "<group>"; };
+		741882E82E636DC900323D93 /* QuizResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsManager.swift; sourceTree = "<group>"; };
+		741882E92E636DC900323D93 /* QuizResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsView.swift; sourceTree = "<group>"; };
+		741882EA2E636DC900323D93 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		741882EC2E636DC900323D93 /* RefModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefModel.swift; sourceTree = "<group>"; };
+		741882ED2E636DC900323D93 /* RefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefView.swift; sourceTree = "<group>"; };
+		741882EF2E636DC900323D93 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		741882F12E636DC900323D93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		741883022E636E8300323D93 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		740AFA392E5F6633001658EA /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		740AFA0D2E5F640E001658EA /* Frameworks */ = {
@@ -92,7 +120,7 @@
 				740AFA2E2E5F645C001658EA /* Main.storyboard */,
 				740AFA2F2E5F645C001658EA /* SceneDelegate.swift */,
 				740AFA302E5F645C001658EA /* ViewController.swift */,
-				740AFA392E5F6633001658EA /* View */,
+				741882F22E636DC900323D93 /* View */,
 			);
 			path = PenaltyHunter;
 			sourceTree = "<group>";
@@ -103,6 +131,77 @@
 				740AFA462E5F8864001658EA /* NavigationManager.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		741882E02E636DC900323D93 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				741882DD2E636DC900323D93 /* enumGuide.swift */,
+				741882DE2E636DC900323D93 /* GuideInfoView.swift */,
+				741882DF2E636DC900323D93 /* GuideView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		741882E22E636DC900323D93 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				741882E12E636DC900323D93 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		741882E52E636DC900323D93 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				741882E32E636DC900323D93 /* NewsModel.swift */,
+				741882E42E636DC900323D93 /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		741882EB2E636DC900323D93 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				741882E62E636DC900323D93 /* QuizModel.swift */,
+				741882E72E636DC900323D93 /* QuizQuestionsView.swift */,
+				741882E82E636DC900323D93 /* QuizResultsManager.swift */,
+				741882E92E636DC900323D93 /* QuizResultsView.swift */,
+				741882EA2E636DC900323D93 /* QuizView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		741882EE2E636DC900323D93 /* Ref */ = {
+			isa = PBXGroup;
+			children = (
+				741882EC2E636DC900323D93 /* RefModel.swift */,
+				741882ED2E636DC900323D93 /* RefView.swift */,
+			);
+			path = Ref;
+			sourceTree = "<group>";
+		};
+		741882F02E636DC900323D93 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				741882EF2E636DC900323D93 /* SettingsView.swift */,
+				741883022E636E8300323D93 /* InfoView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		741882F22E636DC900323D93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				741882E02E636DC900323D93 /* Guide */,
+				741882E22E636DC900323D93 /* Main */,
+				741882E52E636DC900323D93 /* News */,
+				741882EB2E636DC900323D93 /* Quiz */,
+				741882EE2E636DC900323D93 /* Ref */,
+				741882F02E636DC900323D93 /* Settings */,
+				741882F12E636DC900323D93 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +219,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				740AFA392E5F6633001658EA /* View */,
 			);
 			name = PenaltyHunter;
 			productName = PenaltyHunter;
@@ -207,6 +303,22 @@
 			files = (
 				740AFA322E5F645C001658EA /* AppDelegate.swift in Sources */,
 				740AFA332E5F645C001658EA /* SceneDelegate.swift in Sources */,
+				741882F32E636DC900323D93 /* enumGuide.swift in Sources */,
+				741882F42E636DC900323D93 /* GuideInfoView.swift in Sources */,
+				741882F52E636DC900323D93 /* GuideView.swift in Sources */,
+				741882F62E636DC900323D93 /* MainView.swift in Sources */,
+				741882F72E636DC900323D93 /* NewsModel.swift in Sources */,
+				741882F82E636DC900323D93 /* NewsView.swift in Sources */,
+				741883032E636E8300323D93 /* InfoView.swift in Sources */,
+				741882F92E636DC900323D93 /* QuizModel.swift in Sources */,
+				741882FA2E636DC900323D93 /* QuizQuestionsView.swift in Sources */,
+				741882FB2E636DC900323D93 /* QuizResultsManager.swift in Sources */,
+				741882FC2E636DC900323D93 /* QuizResultsView.swift in Sources */,
+				741882FD2E636DC900323D93 /* QuizView.swift in Sources */,
+				741882FE2E636DC900323D93 /* RefModel.swift in Sources */,
+				741882FF2E636DC900323D93 /* RefView.swift in Sources */,
+				741883002E636DC900323D93 /* SettingsView.swift in Sources */,
+				741883012E636DC900323D93 /* ContentView.swift in Sources */,
 				740AFA472E5F886A001658EA /* NavigationManager.swift in Sources */,
 				740AFA342E5F645C001658EA /* ViewController.swift in Sources */,
 			);
@@ -244,6 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PenaltyHunter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Penalty Hunter";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -255,7 +368,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.PenaltyHunter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hug.p3n4ltyhunt3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -277,6 +390,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PenaltyHunter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Penalty Hunter";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -288,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.PenaltyHunter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hug.p3n4ltyhunt3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

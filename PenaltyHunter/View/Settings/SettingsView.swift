@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingsView: View {
     @EnvironmentObject var navManager: NavigationManager
@@ -32,7 +33,7 @@ struct SettingsView: View {
                     
                     //MARK: - Policy button
                     Button(action: {
-                        //navManager.navigate(to: .quizResults)
+                        SKStoreReviewController.requestReview()
                     }) {
                         Image(.rateBut)
                             .resizable()
@@ -42,7 +43,9 @@ struct SettingsView: View {
                     
                     //MARK: - Policy button
                     Button(action: {
-                        //navManager.navigate(to: .quizResults)
+                        if let url = URL(string: "https://www.termsfeed.com/live/9a4810c4-cb7c-49dc-bfea-b4b46f41bbb1") {
+                            UIApplication.shared.open(url)
+                        }
                     }) {
                         Image(.policyBut)
                             .resizable()
@@ -52,7 +55,7 @@ struct SettingsView: View {
                     
                     //MARK: - Info button
                     Button(action: {
-                        //navManager.navigate(to: .quizResults)
+                        navManager.navigate(to: .info)
                     }) {
                         Image(.infoBut)
                             .resizable()
