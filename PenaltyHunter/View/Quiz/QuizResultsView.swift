@@ -4,6 +4,7 @@ struct QuizResultsView: View {
     @EnvironmentObject var navManager: NavigationManager
     @EnvironmentObject var resultsManager: QuizResultsManager
     @State private var selectedDifficulty: DifficultyLevel? = nil
+    @State private var showingResetAlert = false
     
     var body: some View {
         ZStack {
@@ -76,6 +77,9 @@ struct QuizResultsView: View {
                 // Statistics
                 statisticsView
                 
+                // Reset Button
+                resetButtonView
+                
                 // Results List
                 resultsListView
                 
@@ -83,6 +87,14 @@ struct QuizResultsView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .alert("Reset Results", isPresented: $showingResetAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Reset", role: .destructive) {
+                resultsManager.clearResults()
+            }
+        } message: {
+            Text("Are you sure you want to delete all quiz results? This action cannot be undone.")
+        }
     }
     
     private var statisticsView: some View {
@@ -140,6 +152,28 @@ struct QuizResultsView: View {
             }
             .padding(.horizontal)
         }
+    }
+    
+    private var resetButtonView: some View {
+        Button(action: {
+            showingResetAlert = true
+        }) {
+            HStack {
+                Image(systemName: "trash")
+                    .font(.title2)
+                Text("Reset All Results")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal, 30)
+            .padding(.vertical, 15)
+            .background(
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.red.opacity(0.8))
+            )
+        }
+        .padding(.horizontal)
     }
 }
 

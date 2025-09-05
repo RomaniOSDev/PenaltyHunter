@@ -6,14 +6,32 @@
 //
 
 import UIKit
+import OneSignalFramework
+import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    var restrictRotation: UIInterfaceOrientationMask = .all
+    private let oneSignalIDCheker = OneSignalIDChecker()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // AppsFlyer Init
+           AppsFlyerLib.shared().appsFlyerDevKey = "Q6HCdw4ZddvNDqdusXdESC"
+           AppsFlyerLib.shared().appleAppID = "6747954089"
+           AppsFlyerLib.shared().delegate = self
+           AppsFlyerLib.shared().isDebug = true
+           
+        AppsFlyerLib.shared().start()
+        let appsFlyerId = AppsFlyerLib.shared().getAppsFlyerUID()
+        
+        
+        //MARK: - One signal
+        OneSignal.initialize("e8fb192-f64d-4179-b680-8d400ae2a89e", withLaunchOptions: nil)
+        oneSignalIDCheker.startCheckingOneSignalID()
+    
+        OneSignal.login(appsFlyerId)
         return true
     }
 
